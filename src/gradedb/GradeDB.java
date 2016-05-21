@@ -40,7 +40,7 @@ public class GradeDB {
         
         System.out.println("Enter Customer Name 'Stop' to quit.");
         BufferedReader br = new BufferedReader (new InputStreamReader(System.in));
-        
+        //Entering new Customer 
         do 
         {
             System.out.print("Enter Customer First Name:");
@@ -56,6 +56,7 @@ public class GradeDB {
 
         } while (!fnm.equals("Stop"));
         
+        // Entering Address of the Customer
         
         iter = cst.iterator();
         while(iter.hasNext())
@@ -76,10 +77,16 @@ public class GradeDB {
         }
         
         
-        
-        
+       //Printing  details of the Customer 
+       
+        iter = cst.iterator();
+        while(iter.hasNext())
+        {
+            currCst = iter.next();
             System.out.print("Current Customer:" + currCst.displayName() +" ");     
-            System.out.print("Customer Address:" + currCst.displayCurrentAddress());          
+            System.out.print("Customer Address:" + currCst.displayCurrentAddress());    
+        }
+      
       
         
         
